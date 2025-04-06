@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prconnect - Royal Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body class="font-poppins bg-gray-100 text-gray-900">
+    <script>
+        function toggleNavbar() {
+            const mobileNav = document.getElementById('mobileNav');
+            if (mobileNav.classList.contains('hidden')) {
+                mobileNav.classList.remove('hidden'); // Show the dropdown
+            } else {
+                mobileNav.classList.add('hidden'); // Hide the dropdown
+            }
+        }
+    </script>
+    <!-- Header -->
+    <header class="bg-blue-900 text-yellow-500 py-5">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <a href="#" class="text-3xl font-bold text-yellow-400">Prconnect</a>
+            
+            <!-- Hamburger Menu (Mobile) -->
+            <button class="md:hidden text-yellow-400 text-2xl" onclick="toggleNavbar()" aria-label="Toggle navigation">
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+    
+            <!-- Main Navbar (Desktop) -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-yellow-400">Home</a>
+                <a href="about.html" class="hover:text-yellow-400">About</a>
+                <a href="services.html" class="hover:text-yellow-400">Services</a>
+                <a href="features.html" class="hover:text-yellow-400">Features</a>
+                <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+            </nav>
+            
+            <!-- Mobile Navbar (Dropdown) -->
+            <div id="mobileNav" class="hidden flex flex-col space-y-4 bg-white text-blue-900 p-4 absolute top-16 left-0 w-full shadow-md">
+                <a href="index.html" class="hover:text-yellow-500">Home</a>
+                <a href="about.html" class="hover:text-yellow-500">About</a>
+                <a href="services.html" class="hover:text-yellow-500">Services</a>
+                <a href="features.html" class="hover:text-yellow-500">Features</a>
+                <a href="contact.html" class="hover:text-yellow-500">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gray-100 py-20 text-center">
+        <div class="container mx-auto px-6">
+            <p class="text-yellow-500 text-lg uppercase font-semibold">Welcome to Prconnect</p>
+            <h1 class="text-4xl md:text-5xl font-bold text-blue-900">Smart Solutions for Your Business Growth</h1>
+            <p class="text-gray-700 mt-4">We specialize in web development, app development, and SEO strategies to elevate your brand.</p>
+            <div class="mt-6 flex justify-center space-x-4">
+                <a href="services.html" class="bg-purple-600 hover:bg-yellow-400 text-white px-6 py-3 rounded-md transition">Discover Our Services</a>
+               <!-- Button -->
+<button class="flex items-center space-x-2 border-2 border-gray-600 px-6 py-3 rounded-md text-gray-700 hover:text-yellow-400" onclick="openVideo()">
+    <ion-icon name="play" class="text-lg"></ion-icon>
+    <span>How It Works</span>
+</button>
+
+<!-- Video Modal -->
+<!-- Video Modal -->
+<div id="videoModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="relative bg-white rounded-lg w-full max-w-xl mx-auto p-4">
+        <button class="absolute top-4 right-4 text-gray-700 hover:text-yellow-400" onclick="closeVideo()">
+            <ion-icon name="close-outline" class="text-2xl"></ion-icon>
+        </button>
+        <!-- Centered Video -->
+        <div class="flex justify-center items-center w-full h-auto">
+            <video autoplay muted playsinline class="rounded-lg w-full max-w-[90%] max-h-[70vh]" oncontextmenu="return false;">
+                <source src="./images/howitworks.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</div>
+<script>
+    function openVideo() {
+        document.getElementById('videoModal').classList.remove('hidden');
+    }
+
+    function closeVideo() {
+        document.getElementById('videoModal').classList.add('hidden');
+    }
+</script>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto text-center px-6">
+            <h2 class="text-3xl font-semibold text-blue-900">About Us</h2>
+            <p class="text-gray-600 mt-4">At Prconnect, we provide top-notch services to help businesses thrive in the digital space.</p>
+            <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-200 p-6 rounded-lg">Devendra Kate - Founder</div>
+                <div class="bg-gray-200 p-6 rounded-lg">Raj Yadav - Web Developer</div>
+                <div class="bg-gray-200 p-6 rounded-lg">Nitin - Web Developer</div>
+                <div class="bg-gray-200                <div class="bg-gray-200 p-6 rounded-lg">Harshad Nikule - App Developer</div>
+                <div class="bg-gray-200 p-6 rounded-lg">Rishi Rathod - SEO Specialist</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-blue-900 text-white">
+        <div class="container mx-auto text-center px-6">
+            <h2 class="text-3xl font-semibold text-yellow-400">Our Royal Services</h2>
+            <p class="text-gray-300 mt-4">We offer high-end services designed for premium business growth.</p>
+            <div class="mt-10 grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 shadow-lg rounded-lg p-6">
+                    <img src="./images/1.svg" class="mx-auto w-32 h-32" alt="Web Development">
+                    <h3 class="text-xl font-semibold mt-4 text-yellow-400">Web Development</h3>
+                    <p class="text-gray-300 mt-2">Crafting elegant and high-performance websites.</p>
+                </div>
+                <div class="bg-gray-800 shadow-lg rounded-lg p-6">
+                    <img src="./images/2.svg" class="mx-auto w-32 h-32" alt="App Development">
+                    <h3 class="text-xl font-semibold mt-4 text-yellow-400">App Development</h3>
+                    <p class="text-gray-300 mt-2">Building innovative and scalable mobile applications.</p>
+                </div>
+                <div class="bg-gray-800 shadow-lg rounded-lg p-6">
+                    <img src="./images/3.svg" class="mx-auto w-32 h-32" alt="SEO Specialization">
+                    <h3 class="text-xl font-semibold mt-4 text-yellow-400">SEO Excellence</h3>
+                    <p class="text-gray-300 mt-2">Enhancing digital presence with advanced strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-900 text-yellow-400 py-10">
+        <div class="container mx-auto px-6">
+            <!-- Company Info -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Brand Section -->
+                <div>
+                    <h2 class="text-2xl font-bold text-yellow-500">Prconnect</h2>
+                    <p class="text-gray-300 mt-4">
+                        Your trusted partner in web development, app creation, and SEO excellence.
+                    </p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-semibold text-yellow-500">Quick Links</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+                        <li><a href="about.html" class="hover:text-yellow-400">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-yellow-400">Services</a></li>
+                        <li><a href="features.html" class="hover:text-yellow-400">Features</a></li>
+                        <li><a href="contact.html" class="hover:text-yellow-400">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-semibold text-yellow-500">Contact Us</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li><strong>Address:</strong> Dahisar, Mumbai</li>
+                        <li><strong>Phone:</strong> <a href="tel:+918657833112" class="hover:text-yellow-400">+91 86578 33112</a></li>
+                        <li><strong>Email:</strong> <a href="mailto:help.prconnect@gmail.com" class="hover:text-yellow-400">help.prconnect@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Team Info -->
+            <div class="border-t border-gray-700 mt-10 pt-6">
+                <h3 class="text-xl font-semibold text-yellow-500 text-center">Meet Our Team</h3>
+                <div class="mt-6 grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+                    <div>
+                        <p class="text-yellow-500 font-semibold">Devendra Kate</p>
+                        <p class="text-gray-300 text-sm">Founder</p>
+                    </div>
+                    <div>
+                        <p class="text-yellow-500 font-semibold">Raj Yadav</p>
+                        <p class="text-gray-300 text-sm">Web Developer</p>
+                    </div>
+                    <div>
+                        <p class="text-yellow-500 font-semibold">Nitin</p>
+                        <p class="text-gray-300 text-sm">Web Developer</p>
+                    </div>
+                    <div>
+                        <p class="text-yellow-500 font-semibold">Harshad Nikule</p>
+                        <p class="text-gray-300 text-sm">App Developer</p>
+                    </div>
+                    <div>
+                        <p class="text-yellow-500 font-semibold">Rishi Rathod</p>
+                        <p class="text-gray-300 text-sm">SEO Specialist</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Copyright Info -->
+            <div class="mt-10 text-center">
+                <p class="text-gray-300">&copy; 2025 Prconnect. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/ionicons@5.5.3/dist/ionicons.js"></script>
+
+</body>
+</html>
